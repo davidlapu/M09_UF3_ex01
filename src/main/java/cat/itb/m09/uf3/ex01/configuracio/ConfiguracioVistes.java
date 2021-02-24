@@ -9,5 +9,7 @@ public class ConfiguracioVistes implements WebMvcConfigurer {
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/salutacio").setViewName("index.html");
+        registry.addViewController("/dni").setViewName("dni.html");
+        registry.addViewController("/isbn").setViewName("isbn.html");
     }
 }
