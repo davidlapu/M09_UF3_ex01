@@ -1,4 +1,4 @@
-package cat.itb.m09.uf3.ex01.models;
+package cat.itb.m09.uf3.ex01.entidades;
 
 import java.util.Random;
 
