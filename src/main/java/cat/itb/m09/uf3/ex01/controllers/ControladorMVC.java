@@ -12,6 +12,13 @@ public class ControladorMVC {
     @Autowired
     private EmpleatService empleatService;
 
+    @PostMapping("/empleats/edit/submit")
+    public String edit(@ModelAttribute("empleatForm") Empleat emp) {
+        empleatService.substituir(emp);
+        return "redirect:/empleats/list";
+    }
+
+
     @GetMapping("/empleats/list")
     public String llistar(Model m){
         m.addAttribute("llistaEmpleats", empleatService.llistat());
