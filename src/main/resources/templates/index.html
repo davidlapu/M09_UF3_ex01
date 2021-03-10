@@ -9,6 +9,12 @@
     <h1>INDEX</h1>
     <a href="/empleats/new">Afegir empleats</a><br/>
     <a href="/empleats/list">Llistar empleats </a><br/>
+    <a href="/empleats/list_ordened">Llistar empleats ordenat per nom</a><br/>
+    <form action="/empleats/consult_by_id" method="get">
+        <label> Consultar per id
+            <input type="number" name="id" />
+        </label>
+    </form>
     <form action="/myServlet" method="post">
         <label> Com et dius? <br />
             <input type="text" name="nom" />

@@ -12,6 +12,18 @@ public class ControladorMVC {
     @Autowired
     private EmpleatService empleatService;
 
+    @GetMapping("/empleats/list_ordened")
+    public String llistarOrdenat(Model m){
+        m.addAttribute("llistaEmpleats", empleatService.llistatOrdenatPerNom());
+        return "llistat";
+    }
+
+    @GetMapping("/empleats/consult_by_id")
+    public String consultById(@RequestParam("id")int id, Model m) {
+        m.addAttribute("llistaEmpleats", empleatService.consultaPerId(id));
+        return "llistat";
+    }
+
     @PostMapping("/empleats/edit/submit")
     public String edit(@ModelAttribute("empleatForm") Empleat emp) {
         empleatService.substituir(emp);
